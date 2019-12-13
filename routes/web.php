@@ -58,7 +58,22 @@ Route::group(['prefix'=>'admin'],function(){
 	});
 		route::group(['prefix'=>'ajax'],function(){
 		route::get('loaitin/{idTheLoai}','AjaxController@getLoaiTin');
-		});
+	});
+
+		route::group(['prefix'=>'user'],function(){
+		route::get('danhsach','UserController@getDanhSach');
+
+		route::get('sua/{id}','UserController@getSua');
+		route::post('sua/{id}','UserController@postSua');
+		
+
+		route::get('them','UserController@getThem');
+		route::post('them','UserController@postThem');
+
+		route::get('xoa/{id}','UserController@getXoa');
+
+	});
+		
 
 });
 
@@ -72,6 +87,9 @@ route::get('tintuc/{id}/{TieuDeKhongDau}.html','pagecontroller@tintuc');
 route::get('dangnhap','pagecontroller@getDangnhap');
 route::post('dangnhap','pagecontroller@postDangnhap');
 route::get('gioithieu','pagecontroller@gioithieu');
-
-
+route::get('dangky','pagecontroller@getDangky');
+route::post('dangky','pagecontroller@postDangky');
+route::get('dangxuat','pagecontroller@getDangxuat');
+route::get('nguoidung','pagecontroller@getNguoidung');
+route::post('nguoidung','pagecontroller@postNguoidung');
 route::post('timkiem','pagecontroller@timkiem');

@@ -29,25 +29,28 @@
 			        </div>
 			        <button type="submit" class="btn btn-default">Tìm</button>
 			    </form>
-
+                    đsdsdsa
 			    <ul class="nav navbar-nav pull-right">
+                    @if(!isset($nguoidung))
                     <li>
                         <a href="dangky">ĐĂNG KÝ</a>
                     </li>
                     <li>
                         <a href="dangnhap">ĐĂNG NHẬP</a>
                     </li>
+                    @else
                     <li>
-                    	<a>
+                    	<a href="nguoidung">
                     		<span class ="glyphicon glyphicon-user"></span>
-                    		huy vinh
+                    		<!-- {{$nguoidung->name}} -->
+
                     	</a>
                     </li>
 
                     <li>
-                    	<a href="#">Đăng xuất</a>
+                    	<a href="dangxuat">Đăng xuất</a>
                     </li>
-                    
+                    @endif
                 </ul>
             </div>
 

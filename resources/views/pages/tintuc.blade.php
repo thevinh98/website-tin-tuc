@@ -15,20 +15,20 @@
                 <h1>{{$tintuc->TieuDe}}</h1>
 
                 <!-- Author -->
-                <p class="lead">
-                    by <a href="#">admin</a>
-                </p>
+               
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="upload/tintuc/{{$tintuc->Hinh}}" alt="">
+              <!--   <img class="img-responsive" src="upload/tintuc/{{$tintuc->Hinh}}" alt=""> -->
 
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on : {{$tintuc->created_at}}</p>
+                <p><span class="glyphicon glyphicon-time"></span> Cập Nhật : {{$tintuc->updated_at}} </p>
+                     <p  >{!! $tintuc->NoiDung !!}</p>
                 <hr>
 
                 <!-- Post Content -->
-                <p class="lead">{!! $tintuc->NoiDung !!}</p>
-
+               
+                    
+                
                 <hr>
 
                 <!-- Blog Comments -->
@@ -81,7 +81,7 @@
                                 </a>
                             </div>
                             <div class="col-md-7">
-                                <a href="#"><b>{{$tt->TieuDe}}</b></a>
+                                <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
                             </div>
                             <p style="padding-left: 5px;">{{$tt->TomTat}}</p>
                             <div class="break"></div>
@@ -104,7 +104,7 @@
                                 </a>
                             </div>
                             <div class="col-md-7">
-                                <a href="#"><b>{{$tt->TieuDe}}</b></a>
+                                <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
                             </div>
                             <p style="padding-left: 5px;">{{$tt->TomTat}}</p>
                             <div class="break"></div>

@@ -12,21 +12,21 @@
             </div>
             <!-- /.col-lg-12 -->
             <div class="col-lg-7" style="padding-bottom:120px">
-                @if(count($errors) > 0)
-                    <div class="alert alert-danger">
-                        @foreach($errors->all() as $err)
-                        {{$err}}<br>
-                        @endforeach
-                        
-                    </div>
-                @endif
+                 @if(count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $err)
+                                    {{$err}}<br>
+                                @endforeach
+                                
+                            </div>
+                        @endif
 
-                @if(session('thongbao'))
-                    <div class="alert alert-sucsess">
-                        {{$session ?? '' ?? ''('thongbao')}}
-                    </div>
-                @endif
-                <form action="admin/tintuc/them" method="POST" enctype="application/x-www-form-urlencoded">
+                        @if(session('thongbao'))
+                           <div class="alert alert-success">
+                                {{session('thongbao')}}
+                            </div>
+                        @endif
+                <form action="admin/tintuc/them" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <label>Thể loại</label>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tóm tắt</label>
-                        <textarea name="TomTat" id="demo" class="form-control ckeditor" rows="3"></textarea>
+                        <textarea name="TomTat"  class="form-control " rows="3"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Nội dung</label>

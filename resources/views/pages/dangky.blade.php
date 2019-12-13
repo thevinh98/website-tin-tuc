@@ -1,19 +1,18 @@
-@extends('admin.layout.index')
+@extends('layout.index')
 
 @section('content')
-        <!-- Page Content -->
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">User
-                            <small>thêm</small>
-                        </h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                    <div class="col-lg-7" style="padding-bottom:120px">
+<!-- Page Content -->
+<div class="container">
 
-                          @if(count($errors) > 0)
+	<!-- slider -->
+	<div class="row carousel-holder">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+			  	<div class="panel-heading">Đăng ký tài khoản</div>
+			  	<div class="panel-body">
+			  		  @if(count($errors) > 0)
                             <div class="alert alert-danger">
                                 @foreach($errors->all() as $err)
                                     {{$err}}<br>
@@ -27,7 +26,7 @@
                                 {{session('thongbao')}}
                             </div>
                         @endif
-                        <form action="admin/user/them" method="POST">
+                        <form action="dangky" method="post">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">
                                 <label>Họ tên</label>
@@ -45,25 +44,27 @@
                                 <label>Nhập lại Password</label>
                                 <input type="password" class="form-control" name="passwordAgain" placeholder="Nhập lại mật khẩu" />
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>Quyền người dùng</label>
                                 <label class="radio-inline">
-                                    <input name="quyen" value="0" checked="" type="radio">Thường
+                                    <input name="quyen" value="0" checked="" type="radio" >Thường
                                 </label>
                                 <label class="radio-inline">
-                                    <input name="quyen" value="1" type="radio">Admin
+                                    <input name="quyen" value="1" type="radio" >Admin
                                 </label>
-                               
-                            </div>
-                            <button type="submit" class="btn btn-default">Thêm</button>
-                            <button type="reset" class="btn btn-default">Làm mới</button>
+                            
+                            </div> -->
+                            <button type="submit" class="btn btn-default">Đăng ký</button>
+                          
                         <form>
                     </div>
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
+			</div>
         </div>
-        <!-- /#page-wrapper -->
+        <div class="col-md-2">
+        </div>
+    </div>
+    <!-- end slide -->
+</div>
+<!-- end Page Content -->
 
-@endsection        
+@endsection
