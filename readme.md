@@ -19,8 +19,9 @@ Không riêng ở Việt Nam, thiết kế web tin tức ngày càng được ch
  Tạo ra được một website tin tức ( Báo điện tử). Tiện lợi với người đọc. Có khả năng thay báo giấy truyền thống. Khác biệt với báo giấy, có rất nhiều hạn chế luôn bị giới hạn nhất định về số trang, số chữ , thời điểm phát hành và số lượng tin tức, báo điện tử có tốc độ cập nhật tuyệt vời và không gian tin tức không giới hạn. 
 
 ## Ưu và nhược điểm
-
+<pre>
 Ưu điểm :
+
 •	Hoạt động liên tục
 •	Tiện lợi với người dùng
 •	Cập nhật thông tin một cách nhanh chóng
@@ -36,7 +37,7 @@ Phần ADMIN
 - Phần này quản lý về các danh mục, các bài viết, tài  khoản người dùng, và comment.
 •	Có thể thêm sửa xóa danh mục dễ dàng.
 •	Cập nhật bài viết mới một cách nhanh chóng và dễ dàng.
-
+</pre>
 
 ## Cách cài đặt và chạy chương trình
 - Cần cài Xampp và phần mềm lập trình như sublime Text hoặc visual studio code...
