@@ -11,36 +11,56 @@
 
 ## Giới Thiệu về website tin tức
 
-Website không còn là công cụ xa lạ của các doanh nghiệp, các tổ chức hay thậm chí là các cá nhân bởi hầu hết với sự phát triển của internet mỗi đối tượng đều sở hữu cho mình một website.
+- Website không còn là công cụ xa lạ của các doanh nghiệp, các tổ chức hay thậm chí là các cá nhân bởi hầu hết với sự phát triển của internet mỗi đối tượng đều sở hữu cho mình một website.
 Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tật mọi thông tin mà bạn mong muốn truyền tải đến khách hàng đều có thể thông qua website. Bởi theo định nghĩa website là gì, website đã được giải mã là một trang thông tin đặc biệt dành cho khách hàng. Tất cả mọi thông tin về doanh nghiệp, dịch vụ, sản phẩm đến chương trình khuyến mãi, hướng dẫn sử dụng, chia sẻ bí quyết bạn đều có thể cập nhật trên trang web của mình. Tuy nhiên, mọi thông tin cần được thể hiện một cách rõ ràng, mạch lạc để tạo nên sự thu hút đối tượng mục tiêu mà bạn nhắm đến. 
-Không riêng ở Việt Nam, thiết kế web tin tức ngày càng được chú ý nhiều hơn bởi nó là đối tượng được hàng triệu người tìm kiếm và truy cập mỗi ngày, là nguồn thu nhập đáng kể của các đơn vị báo chí. Đó là thiết kế một trang báo điện tử – một hình thức báo chí có khả năng tiếp cận và phản hồi liên tục trong mọi thời điểm trên toàn cầu, cập nhật liên tục các thông tin nóng hổi xảy ra trên khắp thế giới. Khác biệt hoàn toàn với báo giấy, có rất nhiều hạn chế luôn bị giới hạn nhất định về số trang, số chữ, thời điểm phát hành và số lượng tin tức, báo điện tử có tốc độ cập nhật tuyệt vời và không gian tin tức không giới hạn. Đặc biệt trong thời đại công nghệ thông tin sức mạnh của báo điện tử đang uy hiếp mạnh mẽ đến sự tồn tại của hình thức báo giấy truyền thống từng tồn tại hàng trăm năm nay.
 
+
+## Công dụng và ứng dụng  
+### Công dụng
+
+- Tìm kiếm bài viết theo tiêu đề.
+- Tìm kiếm bài viết theo các danh mục.
+- Đọc bài viết trực tuyến.
+
+### Ứng dụng
+- Ứng dụng cho đọc giả tiềm kiếm thông tin và cập nhật thông tin mới.
+- Ứng dụng cho những đọc giả muốn biết về thông tin mới trong xã hội.
 
 ## Mục đích  
+### Đầu vào
+- Tiêu đề bài viết.
+- Tên danh mục.
+- Email, tài khoản và mật khẩu người dùng.
 
- Tạo ra được một website tin tức ( Báo điện tử). Tiện lợi với người đọc. Có khả năng thay báo giấy truyền thống. Khác biệt với báo giấy, có rất nhiều hạn chế luôn bị giới hạn nhất định về số trang, số chữ , thời điểm phát hành và số lượng tin tức, báo điện tử có tốc độ cập nhật tuyệt vời và không gian tin tức không giới hạn. 
+### Đầu ra
+ - Danh mục bài viết.
+ - Danh sách các bài viết.
+ - Nội dung của bài viết.
 
-## Ưu và nhược điểm
-<pre>
-Ưu điểm :
+## Các bước cài đặt
 
-•	Hoạt động liên tục
-•	Tiện lợi với người dùng
-•	Cập nhật thông tin một cách nhanh chóng
-•	Không giới hạn về nội dung
-•	Phù hợp với công nghệ hiện tại.
-Nhược điểm:
-•	Yêu cầu có đường truyền internet.
-•	Yêu cài thiết bị như máy tính, điện thoại, laptop...
-Website sẽ bao gồm các chức năng sau:
-•	Chức năng tìm kiếm.
-•	Hiển thị thông tin các bài viết.
-Phần ADMIN
-- Phần này quản lý về các danh mục, các bài viết, tài  khoản người dùng, và comment.
-•	Có thể thêm sửa xóa danh mục dễ dàng.
-•	Cập nhật bài viết mới một cách nhanh chóng và dễ dàng.
-</pre>
+- Bước 1 :  Clone Responsity này về.
+- Bước 2 : Nếu cài đặt xampp, thì copy folder vừa clone về vô thư mục htdocs của xampp.
+- Bước 3 : Mở xampp và run Apache và Mysql như hình dưới đây.
 
-## Cách cài đặt và chạy chương trình
-- Cần cài Xampp và phần mềm lập trình như sublime Text hoặc visual studio code...
+  ![](img/xampp.PNG) (&lt;img /&gt;)
+- Bước 4 : Mở phpmyadmin và thêm file DATABASE.sql với tên "tin_tuc".
+	![](img/sql.PNG) (&lt;img /&gt;)
+- Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost].
+- Bước 6 : Enter
+ 
+## Nội dung bài toán
+## Hướng phát triển
+-  Hiển thị video và xem trực tuyến.
+- Tìm kiếm bài viết với các từ khóa gần giống.
+- Phát triển thành một website với thông tin cập nhật nhanh chóng nhất.
+
+## Tác Giả
+- ** Phùng thế vinh** 
+- **Y Huy Bol** 
+
+## Tham khảo
+ - ![Tham khảo tại](khoapham.vn) (&lt;a&gt;)
+
+
  
