@@ -43,9 +43,11 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
 - Bước 2 : Nếu cài đặt xampp, thì copy folder vừa clone về vô thư mục htdocs của xampp.
 - Bước 3 : Mở xampp và run Apache và Mysql như hình dưới đây.
 
-  ![](img/xampp.PNG) (&lt;img /&gt;)
+  ![](img/xampp.PNG) 
+
 - Bước 4 : Mở phpmyadmin và thêm file DATABASE.sql với tên "tin_tuc".
-	![](img/sql.PNG) (&lt;img /&gt;)
+
+	![](img/sql.PNG) 
 - Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost].
 - Bước 6 : Enter
  
@@ -56,11 +58,11 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
 - Phát triển thành một website với thông tin cập nhật nhanh chóng nhất.
 
 ## Tác Giả
-- ** Phùng thế vinh** 
+- **Phùng thế vinh** 
 - **Y Huy Bol** 
 
 ## Tham khảo
- - ![Tham khảo tại](khoapham.vn) (&lt;a&gt;)
+ - Tham khảo tại :http://khoapham.com
 
 
  
