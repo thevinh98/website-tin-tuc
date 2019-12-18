@@ -45,21 +45,34 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
 
   ![](img/xampp.PNG) 
 
-- Bước 4 : Mở phpmyadmin và thêm file DATABASE.sql với tên "tin_tuc".
+- Bước 4 : Mở phpmyadmin. Tạo mới một database mới với tên tintuc2 tiếp đó import
+ file tintuc2.sql vô database mới tạo.
 
 	![](img/sql.PNG) 
 - Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost].
 - Bước 6 : Enter
  
 ## Nội dung bài toán
+### Chức Năng Làm được:
+- Thiết kế giao diện người dùng
+	![](img/tc1.PNG) 
+- Giao diện đọc nội dung bài viết.
+	![](img/tintuc.PNG) 
+- Thiết kế giao diện admin
+	![](img/admin.PNG) 
 ## Hướng phát triển
 -  Hiển thị video và xem trực tuyến.
 - Tìm kiếm bài viết với các từ khóa gần giống.
 - Phát triển thành một website với thông tin cập nhật nhanh chóng nhất.
 
 ## Tác Giả
-- **Phùng thế vinh** 
-- **Y Huy Bol** 
+###**Phùng thế vinh**:
+- Module :resoures -> View -> Admin 
+- http -> Controller (loaitincontroller.php , theloaicontroller.php, tintuccontroller.php, usercontroller.php)
+
+###**Y Huy Bol**   
+-Module : resoures ->layout + pages
+- http -> Controller (pagecontroller.php)
 
 ## Tham khảo
  - Tham khảo tại :http://khoapham.com

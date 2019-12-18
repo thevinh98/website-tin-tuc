@@ -16,7 +16,7 @@
 
             <div class="col-md-9 ">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:#006400; color:white;">
+                    <div class="panel-heading" style="background-color:#007bff; color:white;">
                         <h4><b>Tìm kiếm : {{$tukhoa}}</b></h4>
                     </div>
                     @foreach($tintuc as $tt)

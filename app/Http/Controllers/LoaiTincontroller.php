@@ -36,7 +36,7 @@ class LoaiTincontroller extends Controller
 
         $loaitin = new LoaiTin;
         $loaitin->Ten = $request->Ten;
-        $loaitin->TenKhongDau = changeTitle($request->TenKhongDau);
+         $loaitin->TenKhongDau = changeTitle($request->Ten);
         $loaitin->idTheLoai = $request->TheLoai;
         $loaitin->save();
 

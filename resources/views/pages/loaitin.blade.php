@@ -8,7 +8,7 @@
 
             <div class="col-md-9 ">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:#006400; color:white;">
+                    <div class="panel-heading" style="background-color:#007bff; color:white;">
                         <h4><b>{{$loaitin->Ten}}</b></h4>
                     </div>
                     @foreach($tintuc as $tt)
@@ -16,14 +16,14 @@
                     <div class="row-item row">
                         <div class="col-md-3">
 
-                            <a href="detail.html">
+                            <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">
                                 <br>
                                 <img width="200px" height="200px" class="img-responsive" src="upload/tintuc/{{$tt->Hinh}}" alt="">
                             </a>
                         </div>
 
                         <div class="col-md-9">
-                            <h3>{{$tt->TieuDe}}</h3>
+                           <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"> <h3>{{$tt->TieuDe}}</h3></a>
                             <p>{{$tt->TomTat}}</p>
                             <a class="btn btn-primary" href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html">Xem thêm <span class="glyphicon glyphicon-chevron-right"></span></a>
                         </div>
