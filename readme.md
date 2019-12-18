@@ -72,7 +72,7 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
 - Module :http -> Controller (loaitincontroller.php , theloaicontroller.php, tintuccontroller.php, usercontroller.php)
 
 **Y Huy Bol**   
--Module : resoures ->layout + pages
+- Module : resoures ->layout + pages
 - Module : http -> Controller (pagecontroller.php)
 
 ## Tham khảo
