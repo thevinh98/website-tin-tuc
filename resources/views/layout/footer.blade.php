@@ -1,4 +1,7 @@
- 
+
+
+
+
     <!-- Footer -->
    <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -37,7 +40,18 @@
               <h2 class="ftco-heading-2">Tin Mới</h2>
               <div class="block-21 mb-4 d-flex">
                 
-                <div class="text">
+                <div class="text" >
+                     
+
+                @foreach($data->all() as $tintuc)
+                <a href="tintuc/{{$tintuc['id']}}/{{$tintuc['TieuDeKhongDau']}}.html">
+                  <h4 style="color: #fff">
+                    <span class="glyphicon glyphicon-list-alt"></span> 
+                    {{$tintuc['TieuDe']}}
+                  </h4>
+                </a>
+                @endforeach
+             
 
                   
                 </div>
@@ -68,3 +82,4 @@
       </div>
     </footer>
     <!-- end Footer -->
+  
