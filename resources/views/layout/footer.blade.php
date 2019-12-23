@@ -40,19 +40,38 @@
               <h2 class="ftco-heading-2">Tin Mới</h2>
               <div class="block-21 mb-4 d-flex">
                 
-                <div class="text" >
-                     
-
-                @foreach($data->all() as $tintuc)
-                <a href="tintuc/{{$tintuc['id']}}/{{$tintuc['TieuDeKhongDau']}}.html">
+                <div class="text" style="width: 350px" >
+                  <div class="row-item row">  
+             @foreach($theloai as $tl)
+                  @if(count($tl->loaitin) > 0)
+                  <!-- item -->     
+                      <?php 
+                      $data = $tl->tintuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
+                      $tin1 = $data->shift();
+                       ?>
+            
+                <!-- @foreach($data->all() as $tintuc)
+               <a href="tintuc/{{$tin1['id']}}/{{$tin1['TieuDeKhongDau']}}.html">
                   <h4 style="color: #fff">
                     <span class="glyphicon glyphicon-list-alt"></span> 
                     {{$tintuc['TieuDe']}}
                   </h4>
                 </a>
                 @endforeach
-             
+                -->
 
+                <a href="tintuc/{{$tin1['id']}}/{{$tin1['TieuDeKhongDau']}}.html">
+                  <h4 style="color: #fff">
+                    <span class="glyphicon glyphicon-list-alt"></span> 
+                    {{$tin1['TieuDe']}}
+                  </h4>
+                </a>
+
+
+                    <!-- end item -->
+                    @endif
+                    @endforeach
+                  </div>
                   
                 </div>
                         
