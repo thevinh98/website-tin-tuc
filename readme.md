@@ -39,7 +39,7 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
 
 ## Các bước cài đặt
 
-- Bước 1 :  Clone Responsity này về.
+- Bước 1 :  Clone Responsity này về (chú ý: đổi tên folder vender1 thành tên vender).
 - Bước 2 : Nếu cài đặt xampp, thì copy folder vừa clone về vô thư mục htdocs của xampp.
 - Bước 3 : Mở xampp và run Apache và Mysql như hình dưới đây.
 
@@ -49,7 +49,7 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
  file tintuc2.sql vô database mới tạo.
 
 	![](img/sql.PNG) 
-- Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost].
+- Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost]/public/[phần bạn muốn vào(trangchu hoặc admin)].
 - Bước 6 : Enter
  
 ## Nội dung bài toán
