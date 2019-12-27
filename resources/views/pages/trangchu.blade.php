@@ -46,7 +46,7 @@
 	            	</div>
 
 	            	<div class="panel-body">
-	            		@foreach($theloai as $tl)
+	            		@foreach($theloai as $tl )
 	            		@if(count($tl->loaitin) > 0)
 	            		<!-- item -->
 					    <div class="row-item row">

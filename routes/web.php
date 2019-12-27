@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/dangnhap','UserController@getDangnhapAdmin');
+Route::post('admin/dangnhap','UserController@postDangnhapAdmin');
+Route::get('admin/logout','UserController@getDangXuatAdmin');
+
 Route::group(['prefix'=>'admin'],function(){
 	route::group(['prefix'=>'theloai'],function(){
 		route::get('danhsach','TheLoaiController@getDanhSach');
@@ -56,6 +60,27 @@ Route::group(['prefix'=>'admin'],function(){
 		route::get('xoa/{id}','TinTucController@getXoa');
 
 	});
+
+		route::group(['prefix'=>'silde'],function(){
+		route::get('danhsach','SlideController@getDanhSach');
+
+		route::get('sua/{id}','SlideController@getSua');
+		route::post('sua/{id}','SlideController@postSua');
+		
+
+		route::get('them','SlideController@getThem');
+		route::post('them','SlideController@postThem');
+
+		route::get('xoa/{id}','SlideController@getXoa');
+
+	});
+
+		route::group(['prefix'=>'comment'],function(){
+		route::get('xoa/{id}/{idTinTuc}','CommentController@getXoa');
+
+	});
+
+
 		route::group(['prefix'=>'ajax'],function(){
 		route::get('loaitin/{idTheLoai}','AjaxController@getLoaiTin');
 	});
@@ -93,3 +118,5 @@ route::get('dangxuat','pagecontroller@getDangxuat');
 route::get('nguoidung','pagecontroller@getNguoidung');
 route::post('nguoidung','pagecontroller@postNguoidung');
 route::post('timkiem','pagecontroller@timkiem');
+
+route::post('comment/{id}','Commentcontroller@postComment');

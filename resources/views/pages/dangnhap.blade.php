@@ -11,7 +11,7 @@
                 <div class="panel panel-default">
 				  	<div class="panel-heading">Đăng nhập</div>
 				  	<div class="panel-body">
-				    	<form action="trangchu" method="post">
+				    	<form action="dangnhap" method="post">
 				    		<input type="hidden" name="_token" value="{{csrf_token()}}">
 							<div>
 				    			<label>Email</label>
@@ -24,7 +24,7 @@
 							  	<input type="password" class="form-control" name="password">
 							</div>
 							<br>
-							<button type="submit" class="btn btn-default">Đăng nhập
+							<button style=" background-color: blue; color: #fff;width: 100%;" type="submit" class="btn btn-default">Đăng nhập
 							</button>
 				    	</form>
 				  	</div>

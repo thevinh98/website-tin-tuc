@@ -104,7 +104,10 @@
                         </p>
                     </div>
                     <div class="col text-right">
-                        <a href="#" class="btn-link">Tên người dùng</a>
+
+
+
+                        <!-- <a href="#" class="btn-link">Tên người dùng</a> -->
                     </div>
                 </div>
             </div>

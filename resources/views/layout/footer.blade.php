@@ -79,22 +79,15 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-                <h2 class="ftco-heading-2">Subscribe Us!</h2>
-              <form action="#" class="subscribe-form">
-                <div class="form-group">
-                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-                  <input type="submit" value="Subscribe" class="form-control submit px-3">
-                </div>
-              </form>
-            </div>
-          </div>
+                          <div class="break"></div><br>
+                                    <iframe  width="255px" height="255px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.495637889898!2d109.19421021429842!3d12.282372832950422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067fbaf7bad35%3A0x85d89679ce550ec4!2zMTAxIE1haSBYdcOibiBUaMaw4bufbmcsIFbEqW5oIEjhuqNpLCBUaMOgbmggcGjhu5EgTmhhIFRyYW5nLCBLaMOhbmggSMOyYSA2NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1572266989571!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Thực hiện bởi <i class="icon-heart" aria-hidden="true"></i>  <a href="https://colorlib.com" target="_blank">Vinh-Huy</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Thực hiện bởi <i class="icon-heart" aria-hidden="true"></i>  <a href="trangchu" target="_blank"> TIN TỨC ONLINE</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

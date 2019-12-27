@@ -1,6 +1,7 @@
 @extends('layout.index')
 
 @section('content')
+
 <!-- Page Content -->
 <div class="container">
 
@@ -15,25 +16,25 @@
 			    	<form>
 			    		<div>
 			    			<label>Họ tên</label>
-						  	<input type="text" class="form-control" placeholder="Username" name="name" aria-describedby="basic-addon1" value="{{$nguoidung ?? ''->name}}">
+						  	<input type="text" class="form-control" placeholder="Username" name="name" aria-describedby="basic-addon1" value="{{$nguoidung->name}}">
 						</div>
 						<br>
 						<div>
 			    			<label>Email</label>
 						  	<input type="email" class="form-control" placeholder="Email" name="email" aria-describedby="basic-addon1"
-						  	readonly value="{{$nguoidung ?? ''->email}}" 
+						  	readonly value="{{$nguoidung->email}}" 
 						  	>
 						</div>
 						<br>	
 						<div>
-							<input type="checkbox" id="changePassword" name="checkpassword">
+							<input type="checkbox" class="" name="checkpassword">
 			    			<label>Đổi mật khẩu</label>
-						  	<input type="password" class="form-control password" name="password" aria-describedby="basic-addon1" disabled >
+						  	<input type="password" class="form-control" name="password" aria-describedby="basic-addon1">
 						</div>
 						<br>
 						<div>
 			    			<label>Nhập lại mật khẩu</label>
-						  	<input type="password" class="form-control password" name="passwordAgain" aria-describedby="basic-addon1" disabled >
+						  	<input type="password" class="form-control" name="passwordAgain" aria-describedby="basic-addon1">
 						</div>
 						<br>
 						<button type="button" class="btn btn-default">Sửa
@@ -49,23 +50,4 @@
     <!-- end slide -->
 </div>
 <!-- end Page Content -->
-
 @endsection
-
-@section('script') 
-<script>   
-    $(document).ready(function(){
-        $("#changePassword").change(function(){
-            if($(this).is(":checked"))
-            {
-                $(".password").removeAttr('disabled');
-            }
-            else
-            {
-                $(".password").attr('disabled','');
-            }
-
-        });
-    });
-</script>  
-@endsection  

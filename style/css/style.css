@@ -53,7 +53,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
-  /*font-weight: 400;*/
+  font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -3743,14 +3743,9 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.5); }
   .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-    color: rgba(255, 255, 255, 0.75);
-    background-color: red }
-    .navbar-dark .navbar-nav .nav-link:active {
-    color: rgba(255, 255, 255, 0.75);
-    background-color: red }
+    color: rgba(255, 255, 255, 0.75); }
   .navbar-dark .navbar-nav .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.25);
-    background-color: red  }
+    color: rgba(255, 255, 255, 0.25); }
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
@@ -8281,7 +8276,6 @@ h1, h2, h3, h4, h5,
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
       color: #fff; }
-    
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-left: 0;
@@ -8332,7 +8326,7 @@ h1, h2, h3, h4, h5,
         color: #fff;
         background: #3e64ff; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-   
+    background: #fa5c20 !important;
     color: #fff; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.active > a {
@@ -9120,8 +9114,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 14px;
   background: black;
-  padding: 6em 0;
-  margin-top: 10px; }
+  padding: 6em 0; }
   .ftco-footer .ftco-footer-widget {
     width: 100%;
     display: block; }

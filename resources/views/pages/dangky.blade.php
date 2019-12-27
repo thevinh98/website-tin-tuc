@@ -4,15 +4,15 @@
 <!-- Page Content -->
 <div class="container">
 
-	<!-- slider -->
-	<div class="row carousel-holder">
+    <!-- slider -->
+    <div class="row carousel-holder">
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
             <div class="panel panel-default">
-			  	<div class="panel-heading">Đăng ký tài khoản</div>
-			  	<div class="panel-body">
-			  		  @if(count($errors) > 0)
+                <div class="panel-heading">Đăng ký tài khoản</div>
+                <div class="panel-body">
+                      @if(count($errors) > 0)
                             <div class="alert alert-danger">
                                 @foreach($errors->all() as $err)
                                     {{$err}}<br>
@@ -54,11 +54,11 @@
                                 </label>
                             
                             </div> -->
-                            <button type="submit" class="btn btn-default">Đăng ký</button>
+                            <button style=" background-color: blue; color: #fff;width: 100%;" type="submit" class="btn btn-default">Đăng ký</button>
                           
                         <form>
                     </div>
-			</div>
+            </div>
         </div>
         <div class="col-md-2">
         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\TheLoai;
 use App\Slide;
 use App\LoaiTin;
@@ -31,13 +32,13 @@ class pagecontroller extends Controller
 
     function trangchu()
     {
-    	$theloai = TheLoai::all();
-    	return view ('pages.trangchu');
+        $theloai = TheLoai::all();
+        return view ('pages.trangchu');
     }
     function lienhe()
     {
-    	$theloai = TheLoai::all();
-    	return view ('pages.lienhe');
+        $theloai = TheLoai::all();
+        return view ('pages.lienhe');
     }
     function gioithieu()
     {
@@ -63,9 +64,23 @@ class pagecontroller extends Controller
     }
     function postDangnhap(Request $request)
     {
-        // echo $request->email."<br>";
-        // echo $request->password;
-           return view ('pages.trangchu');
+         $this->validate($request,[
+            'email'=>'required',
+            'password'=>'required|min:3|max:32'
+        ],[
+            'email.required'=>'Bạn chưa đăng nhập email',
+            'password.required'=>'Bạn chưa nhấp password',
+            'password.min'=>'password không được nhỏ hơn 3 ký tự',
+            'password.max'=>'password không được lớn hơn 32 ký tự'
+        ]);
+         if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password]))
+        {
+            return redirect('trangchu');
+        }
+        else
+        {
+            return redirect('dangnhap')->with('thongbao','Đăng nhập không thành công');
+        }
     }
     function getDangky()
     {
@@ -73,32 +88,33 @@ class pagecontroller extends Controller
     }
     function postDangky(Request $request)
     {
-        $this-> validate($request,[
-            'name'=> 'required|min:3',
+            
+        $this -> validate($request,[
+            'name' => 'required|min:3',
             'email'=> 'required|email|unique:users,email',
             'password'=> 'required|min:3|max:32',
-            'passwordAgain'=> 'required|same:password'
+            'passwordAgain'=>'required|same:password'
         ],[
-            'name.required'=> 'Bạn chưa nhập tên người dùng',
-            'name.min'=> 'Tên người dùng phải có ít nhất 3 ký tự',
-            'email.required'=> 'Bạn chưa nhập email',
-            'email.email'=> 'Bạn chưa nhập đúng định dạng email',
-            'email.unique'=> 'email đã tồn tại',
-            'password.required'=> 'Bạn chưa nhập mật khẩu',
-            'password.min'=> 'Mật khẩu phải có ít nhất 3 ký tự',
-            'password.max'=> 'Mật khẩu chỉ được tối đa 32 ký tự',
-            'passwordAgain.required'=> 'Bạn chưa nhập lại mật khẩu',
-            'passwordAgain.same'=> 'Mật khẩu nhập lại chưa khớp'
-        ]);
-        
-        $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->quyen = 0;
-        $user->save();
+                'name.required'=>'Bạn chưa nhập tên người dùng',
+                'name.min'=>'Tên người dùng phải ít nhất 3 kí tự',
+                'email.required'=>'Bạn chưa nhập email',
+                'email.email'=>'Bạn chưa nhập đúng định dạng email',
+                'email.unique'=>'email đã tồn tại',
+                'password.required'=> 'Bạn chưa nhập mật khẩu',
+                'password.min'=> 'Mật khẩu ít nhấu 3 kí tự',
+                'password.max'=>'Mật khẩu chỉ được tối đa 32 kí tự',
+                'passwordAgain.required'=>'Bạn chưa nhập lại mật khẩu',
+                'passwordAgain.same'=>'Mật khẩu nhập lại chưa đúng'
 
-        return redirect('dangky')->wiht('thongbao','Chúc mừng bạn đã đăng ký thành công');
+        ]);
+
+        $user = new User;
+        $user ->name =$request->name;
+        $user->email=$request->email;
+        $user ->password= bcrypt($request->password);
+        $user->quyen = 0;
+        $user ->save();
+        return redirect('dangnhap') -> with('thongbao','Chúc mừng bạn đã đăng ký thành công');
     }
     function getDangxuat()
     {
@@ -108,6 +124,7 @@ class pagecontroller extends Controller
 
      function getNguoidung()
     {
+        
         return view ('pages.nguoidung');
     }
     function postNguoidung()

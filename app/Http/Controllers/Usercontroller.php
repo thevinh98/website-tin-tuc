@@ -99,5 +99,37 @@ class Usercontroller extends Controller
        $user->delete();
        return redirect('admin/user/danhsach')->with('thongbao','Xóa người dùng thành công');
     }
+
+    public function getDangnhapAdmin()
+    {
+        return view('admin.login');
+    }
+
+    public function postDangnhapAdmin(Request $request)
+    {
+        $this->validate($request,[
+            'email'=>'required',
+            'password'=>'required|min:3|max:32'
+        ],[
+            'email.required'=>'Bạn chưa đăng nhập email',
+            'password.required'=>'Bạn chưa nhấp password',
+            'password.min'=>'password không được nhỏ hơn 3 ký tự',
+            'password.max'=>'password không được lớn hơn 32 ký tự'
+        ]);
+        if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password]))
+        {
+            return redirect('admin/theloai/danhsach');
+        }
+        else
+        {
+            return redirect('admin/dangnhap')->with('thongbao','Đăng nhập không thành công');
+        }
+    }
+
+    public function getDangXuatAdmin()
+    {
+        Auth::logout();
+        return redirect('admin/dangnhap');
+    }
 }
 

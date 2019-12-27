@@ -18,7 +18,7 @@
                
 
                 <!-- Preview Image -->
-              <!--   <img class="img-responsive" src="upload/tintuc/{{$tintuc->Hinh}}" alt=""> -->
+                <!-- <img class="img-responsive" src="upload/tintuc/{{$tintuc->Hinh}}" alt=""> -->
 
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Cập Nhật : {{$tintuc->updated_at}} </p>
@@ -34,17 +34,23 @@
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
+                
                 <div class="well">
+                    @if(session('thongbao'))
+                    {{session('thongbao')}}
+                    @endif
                     <h4>Viết bình luận ...<span class="glyphicon glyphicon-pencil"></span></h4>
-                    <form role="form">
+                    <form action="comment/{{$tintuc->id}}" method="post" role="form">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" name="NoiDung" rows="3"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Gửi</button>
                     </form>
                 </div>
 
                 <hr>
+
 
                 <!-- Posted Comments -->
 
@@ -83,7 +89,7 @@
                             <div class="col-md-7">
                                 <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
                             </div>
-                          <!--   <p style="padding-left: 5px;">{{$tt->TomTat}}</p> -->
+                            <p style="padding-left: 5px;">{{$tt->TomTat}}</p>
                             <div class="break"></div>
                         </div>
                         <!-- end item -->
@@ -106,7 +112,7 @@
                             <div class="col-md-7">
                                 <a href="tintuc/{{$tt->id}}/{{$tt->TieuDeKhongDau}}.html"><b>{{$tt->TieuDe}}</b></a>
                             </div>
-                          <!--   <p style="padding-left: 5px;">{{$tt->TomTat}}</p> -->
+                            <p style="padding-left: 5px;">{{$tt->TomTat}}</p>
                             <div class="break"></div>
                         </div>
                         <!-- end item -->
