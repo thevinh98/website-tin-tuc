@@ -49,7 +49,7 @@ Website sẽ là nơi cung cấp nguồn thông tin hữu ích. Tất tần tậ
  file tintuc2.sql vô database mới tạo.
 
 	![](img/sql.PNG) 
-- Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost]/public/[phần bạn muốn vào(trangchu hoặc admin)].
+- Bước 5 : Vào trình duyệt mở localhost/ [tên thư mục folder trong htdost]/public/[phần bạn muốn vào(trangchu hoặc admin/tintuc/danhsach)].
 - Bước 6 : Enter
  
 ## Nội dung bài toán
