@@ -136,7 +136,7 @@
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a href="trangchu" class="nav-link">Trang Chủ</a></li>
-                <li class="nav-item"><a href="gioithieu" class="nav-link">Giới Thiệu</a></li>
+              <!--   <li class="nav-item"><a href="gioithieu" class="nav-link">Giới Thiệu</a></li> -->
                 <li class="nav-item"><a href="lienhe" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="dangky" class="nav-link">Đăng ký</a></li>
                 <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng Nhập</a></li>
