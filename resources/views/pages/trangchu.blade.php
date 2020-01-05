@@ -8,29 +8,46 @@
     	<!-- slider -->
     	<div class="row carousel-holder">
             <div class="col-md-12">
-                <!-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="slide-image" src="upload/slide/1.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="slide-image" src="upload/slide/3.png" alt="">
-                        </div>
-                    </div>
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div> -->
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+                   
+                   
+								       <section class="home-slider owl-carousel" >
+								       		@foreach($theloai as $tl)
+	              						    @if(count($tl->loaitin) > 0)
+					                        <?php 
+						                      $data = $tl->tintuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
+						                      $tin1 = $data->shift();
+	                     				  ?>
+										      <div class="slider-item" style="background-image:url(upload/tintuc/{{$tin1['Hinh']}});">
+										      	<div class="overlay"></div>
+										        <div class="container">
+										          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+										          <div class="col-md-7 ftco-animate mb-md-5">
+										          	<span class="subheading" style="font-size: 40px;">Tin Mới</span>
+										            <a href="tintuc/{{$tin1['id']}}/{{$tin1['TieuDeKhongDau']}}.html" ><h3 style="color: #fff;font-size: 30px">{{$tin1['TieuDe']}}</h3></a> 
+										            <p><a href="tintuc/{{$tin1['id']}}/{{$tin1['TieuDeKhongDau']}}.html" class="btn btn-primary px-4 py-3 mt-3">xem thêm</a></p>
+										          </div>
+										        </div>
+										        </div>
+										      </div>
+								       @endif
+	                    				@endforeach
+								      	 </section>
+
+										<section class="ftco-section ftco-no-pt ftco-no-pb ftco-consult">
+											<div class="container">
+												<div class="row d-flex no-gutters align-items-stretch	consult-wrap">
+													
+												</div>
+											</div>
+										</section>
+					
+
+ 
+                </div>
             </div>
         </div>
-        <!-- end slide -->
+       
 
         <div class="space20"></div>
 
